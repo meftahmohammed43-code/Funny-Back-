@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Funny Back</title>
+</head>
+<body style="text-align:center;font-family:Arial">
+
+<h1>😂 Funny Back 😂</h1>
+
+<input id="nom" placeholder="الاسم">
+<input id="prenom" placeholder="اللقب">
+<br><br>
+
+<button onclick="calculer()">إظهار النتيجة</button>
+
+<h2 id="result"></h2>
+
+<script>
+function calculer(){
+
+let nom=document.getElementById("nom").value;
+let prenom=document.getElementById("prenom").value;
+
+let moyenne=(Math.random()*20).toFixed(2);
+
+let message="";
+
+if(moyenne<5){
+message="😂 روح ڨاجي مشي خير لك";
+}
+else if(moyenne<8){
+message="⚽ متمشيش تلعب";
+}
+else if(moyenne<10){
+message="📢 جيبو باك جييو باك";
+}
+else if(moyenne<12){
+message="💪 أنت تستطيع";
+}
+else if(moyenne<15){
+message="👏 بصحتك تستاهل";
+}
+else if(moyenne<18){
+message="😎 أنت قوي";
+}
+else{
+message="🎓 مبروككككك طلعت جامعععععة";
+}
+
+document.getElementById("result").innerHTML=
+nom+" "+prenom+
+"<br>معدلك: "+moyenne+"/20"+
+"<br>"+message;
+}
+</script>
+
+</body>
+  </html>
